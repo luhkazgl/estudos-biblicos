@@ -1,8 +1,33 @@
 
-import React from 'react';
+import React, { useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
 
 const HomePage: React.FC = () => {
+  const [lastUpdate, setLastUpdate] = useState<string>("");
+  const [lastMessage, setLastMessage] = useState<string>("");
+
+  useEffect(() => {
+    fetch("https://api.github.com/repos/luhkazgl/estudos-biblicos/commits?per_page=1")
+      .then(res => res.json())
+      .then(data => {
+        if (data && data[0]?.commit) {
+          const date = new Date(data[0].commit.committer.date);
+          setLastUpdate(date.toLocaleDateString("pt-BR"));
+
+          let message = data[0].commit.message;
+
+          // Se for merge automático, pega apenas a última linha (commit original)
+          if (message.startsWith("Merge pull request")) {
+            const parts = message.split("\n").map(p => p.trim()).filter(Boolean);
+            message = parts[parts.length - 1];
+          }
+
+          setLastMessage(message);
+        }
+      })
+      .catch(err => console.error("Erro ao buscar última atualização:", err));
+  }, []);
+
   return (
     <div>
       <div
@@ -11,6 +36,25 @@ const HomePage: React.FC = () => {
       >
         <div className="absolute inset-0 bg-black/60"></div>
         <div className="relative z-10 max-w-5xl mx-auto px-4">
+
+          {/* Barra de atualização no topo */}
+          {lastUpdate && (
+            <div className="w-full bg-white/10 backdrop-blur-sm border-b border-white/10 py-2 px-4 flex flex-col items-center mb-4 rounded-xl">
+              <p className="text-slate-200 text-xs flex items-center gap-1">
+                {/* <span className="text-lg">📅</span> */}
+                Última atualização: <span className="font-medium">{lastUpdate}</span>
+              </p>
+              {lastMessage && (
+                <p
+                  className="text-slate-300 text-[11px] italic mt-0.5 max-w-full truncate"
+                  title={lastMessage} // Tooltip com mensagem completa
+                >
+                  {lastMessage}
+                </p>
+              )}
+            </div>
+          )}
+
           <h1 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight mb-8">
             Bem-vindo aos Estudos Bíblicos
           </h1>
