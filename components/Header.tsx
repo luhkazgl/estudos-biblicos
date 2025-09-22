@@ -31,6 +31,18 @@ const Header: React.FC = () => {
               Estudos Bíblicos
             </NavLink>
             <NavLink
+              to="/licoes-dos-livros"
+              className={({ isActive }) => (isActive ? activeLinkClass : inactiveLinkClass)}
+            >
+              Lições Dos Livros
+            </NavLink>
+            <NavLink
+              to="/destaques"
+              className={({ isActive }) => (isActive ? activeLinkClass : inactiveLinkClass)}
+            >
+              Destaques
+            </NavLink>
+            <NavLink
               to="/outros-estudos"
               className={({ isActive }) => (isActive ? activeLinkClass : inactiveLinkClass)}
             >

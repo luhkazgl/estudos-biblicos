@@ -7,6 +7,10 @@ import HomePage from './pages/HomePage';
 import StudiesPage from './pages/StudiesPage';
 import BookStudyPage from './pages/BookStudyPage';
 import OtherStudiesPage from './pages/OtherStudiesPage';
+import LicoesDosLivrosPage from './pages/LicoesDosLivrosPage';
+import DestaquesPage from './pages/DestaquesPage';
+import LessonViewerPage from './pages/LessonViewerPage';
+import ArticleViewerPage from './pages/ArticleViewerPage';
 
 function App() {
   return (
@@ -18,6 +22,10 @@ function App() {
           <Route path="/estudos" element={<StudiesPage />} />
           <Route path="/estudos/:bookId" element={<BookStudyPage />} />
           <Route path="/outros-estudos" element={<OtherStudiesPage />} />
+          <Route path="/outros-estudos/:articleId" element={<ArticleViewerPage />} />
+          <Route path="/licoes-dos-livros" element={<LicoesDosLivrosPage />} />
+          <Route path="/licoes-dos-livros/:bookId" element={<LessonViewerPage />} />
+          <Route path="/destaques" element={<DestaquesPage />} />
         </Routes>
       </main>
       <Footer />
