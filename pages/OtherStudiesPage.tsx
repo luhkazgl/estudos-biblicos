@@ -119,6 +119,28 @@ const OtherStudiesPage: React.FC = () => {
             </div>
           </div>
         </div>
+
+      {/* Seção de Vídeo Vertical */}
+      <div className="mt-12 bg-white rounded-lg shadow-md border border-slate-200 p-6">
+        <div className="text-center mb-6">
+          <h2 className="text-2xl font-bold text-slate-800">Caso não receba mais atualizações depois de 23 e 24 de setembro.</h2>
+          <p className="text-slate-600 mt-2">
+            Isso significa que o arrebatamento já ocorreu e esse site está condenado a sair do ar em breve.
+          </p>
+        </div>
+        <div className="flex justify-center">
+          <div className="w-[360px] h-[640px] max-w-full">
+            <iframe
+              className="w-full h-full rounded-md"
+              src="arrebatamento.mp4"
+              title="Estudo Bíblico em Vídeo"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
       </div>
 
       <div className="text-center p-8 bg-slate-100 rounded-lg mt-8">
