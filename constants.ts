@@ -9,9 +9,9 @@ export const BOOKS: Book[] = [
 
   // Novo Testamento
   // { id: 'mateus', name: 'Mateus', testament: 'new', description: 'O Evangelho que apresenta Jesus como o Messias prometido, o Rei dos Judeus.', chapters: 28 },
-  { id: 'marcos', name: 'Marcos', testament: 'new', description: 'Um Evangelho dinâmico e cheio de ação, focado nos milagres e no serviço de Jesus.', chapters: 16 },
-  { id: 'lucas', name: 'Lucas', testament: 'new', description: 'O Evangelho que retrata Jesus como o Salvador compassivo de toda a humanidade.', chapters: 24 },
-  { id: 'joao', name: 'João', testament: 'new', description: 'Um Evangelho teológico que revela a divindade de Jesus e o caminho para a vida eterna.', chapters: 21 },
+  { id: 'marcos', name: 'Marcos', testament: 'new', description: 'Um Evangelho dinâmico e cheio de ação, focado nos milagres e no serviço de Jesus.', details: "studies/marcos/marcos-details.md", chapters: 16 },
+  { id: 'lucas', name: 'Lucas', testament: 'new', description: 'O Evangelho que retrata Jesus como o Salvador compassivo de toda a humanidade.', details: "studies/lucas/lucas-details.md", chapters: 24 },
+  { id: 'joao', name: 'João', testament: 'new', description: 'Um Evangelho teológico que revela a divindade de Jesus e o caminho para a vida eterna.', details: "studies/joao/joao-details.md", chapters: 21 },
   // { id: 'romanos', name: 'Romanos', testament: 'new', description: 'Uma carta fundamental do apóstolo Paulo sobre a justificação pela fé em Jesus Cristo.', chapters: 16 },
   // { id: 'apocalipse', name: 'Apocalipse', testament: 'new', description: 'O livro da revelação, que descreve a vitória final de Cristo e a consumação de todas as coisas.', chapters: 22 },
 ];

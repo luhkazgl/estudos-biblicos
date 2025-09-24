@@ -12,6 +12,7 @@ const BookStudyPage: React.FC = () => {
   const [selectedChapter, setSelectedChapter] = useState<number | null>(null);
   const [contentHtml, setContentHtml] = useState<string>('');
   const [converter, setConverter] = useState<any>(null);
+  const [bookDetailsHtml, setBookDetailsHtml] = useState<string>('');
 
   useEffect(() => {
     // Initialize the showdown converter when the component mounts
@@ -23,6 +24,24 @@ const BookStudyPage: React.FC = () => {
       setConverter(sdConverter);
     }
   }, []);
+
+  useEffect(() => {
+    const loadBookDetails = async () => {
+      if (!book?.details || !converter) return;
+
+      try {
+        const res = await fetch(book.details);
+        const markdown = await res.text();
+        const html = converter.makeHtml(markdown);
+        setBookDetailsHtml(html);
+      } catch (err) {
+        console.error('Erro ao carregar detalhes do livro:', err);
+        setBookDetailsHtml('<p class="text-slate-500">Não foi possível carregar os detalhes do livro.</p>');
+      }
+    };
+
+    loadBookDetails();
+  }, [book?.details, converter]);
   
   const handleChapterClick = async (chapter: number) => {
     setSelectedChapter(chapter);
@@ -96,8 +115,12 @@ const BookStudyPage: React.FC = () => {
         </Link>
       </div>
       <div className="bg-white p-6 md:p-8 rounded-lg shadow-md border border-slate-200">
-        <h1 className="text-4xl font-extrabold text-slate-800">{book.name}</h1>
+        <h1 className="text-4xl font-extrabold text-slate-800">Um pouco mais sobre o livro de {book.name}</h1>
         <p className="mt-2 text-lg text-slate-500">{book.description}</p>
+        <hr className="my-6" />
+        <h2 className="text-2xl font-bold text-slate-700 mb-4">Detalhes do Livro</h2>
+        {/* Adicionar os detalhes aqui */}
+        <div className="prose prose-slate max-w-none markdown-content" dangerouslySetInnerHTML={{ __html: bookDetailsHtml }} />
         <hr className="my-6" />
         
         <h2 className="text-2xl font-bold text-slate-700 mb-4">Selecione um Capítulo</h2>

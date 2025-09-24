@@ -4,5 +4,6 @@ export interface Book {
   name: string;
   testament: 'old' | 'new';
   description: string;
+  details: string;
   chapters: number;
 }
