@@ -9,7 +9,7 @@ Porque Deus enviou o seu Filho ao mundo, não para que condenasse o mundo, mas p
 
 *Esse texto é a pregação do evangelho (as boas-novas), declara que Deus encarnou como homem (Jesus) para sofrer a penalidade da nossa culpa, em nosso lugar, revelando o amor de Deus para sua criação através da salvação imerecida por Deus, Cristo Jesus.*
 
-### A Divindade de Jesus no Evangelho de João
+## A Divindade de Jesus no Evangelho de João
 
 Esses textos revelam que Jesus é Deus, eterno, criador e digno de adoração:
 
@@ -20,7 +20,7 @@ Esses textos revelam que Jesus é Deus, eterno, criador e digno de adoração:
 - **João 10:33** – “Tu, sendo homem, te fazes Deus.”
 - **João 20:28** – Tomé declara: “Senhor meu e Deus meu.”
 
-### Unidade entre Jesus e o Pai
+## Unidade entre Jesus e o Pai
 
 Esses versículos mostram que Jesus e o Pai compartilham a mesma essência, vontade e glória:
 

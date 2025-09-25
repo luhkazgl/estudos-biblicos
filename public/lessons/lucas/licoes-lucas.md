@@ -69,5 +69,3 @@ Lucas mostra Jesus orando em momentos únicos que não aparecem nos outros evang
 - **No Getsêmani** – Ora intensamente antes da crucificação, suando gotas de sangue (Lucas 22:41-44).
 - **Na cruz** – Ora pedindo perdão para os que o crucificam (Lucas 23:34) e entrega seu espírito ao Pai (Lucas 23:46).
 - **Em Emaús** – Ora antes de partir o pão com os discípulos (Lucas 24:30).
-
----

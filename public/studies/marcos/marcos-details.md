@@ -4,4 +4,4 @@ O evangelho de Marcos destaca a **autoridade de Jesus** e seu papel como o Servo
 
 Marcos escreveu para cristãos perseguidos, provavelmente em Roma, que precisavam lembrar que seguir Jesus não era sobre status ou glória imediata — mas sobre fidelidade, sacrifício e esperança. Ele nos apresenta um Jesus que sofre, mas que também vence. Um Jesus que serve, mas que também reina. A ênfase está nos *atos* de Jesus mais do que nas *palavras* de Jesus. 
 
-> **Marcos é um Evangelho escrito para mostrar que Jesus é o Messias prometido, mas também o Filho de Deus que veio para servir e dar sua vida em resgate por muitos. Um verso chave para entender o evangelho de Marcos é: *Pois nem mesmo o Filho do Homem veio para ser servido, mas para servir e dar a sua vida em resgate por muitos* (Marcos 10:45)**
+> **Marcos é um Evangelho escrito para um propósito específico: Mostrar que Jesus é o Messias prometido, mas também o Filho de Deus que veio para servir e dar sua vida em resgate por muitos. Um verso chave para entender o evangelho de Marcos é: *Pois nem mesmo o Filho do Homem veio para ser servido, mas para servir e dar a sua vida em resgate por muitos* (Marcos 10:45)**
