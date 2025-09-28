@@ -11,12 +11,16 @@ import LicoesDosLivrosPage from './pages/LicoesDosLivrosPage';
 import DestaquesPage from './pages/DestaquesPage';
 import LessonViewerPage from './pages/LessonViewerPage';
 import ArticleViewerPage from './pages/ArticleViewerPage';
+import QuizzesPage from './pages/QuizzesPage';
+import ScrollToTop from './components/ScrollToTop';
+
 
 function App() {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/estudos" element={<StudiesPage />} />
@@ -26,6 +30,7 @@ function App() {
           <Route path="/licoes-dos-livros" element={<LicoesDosLivrosPage />} />
           <Route path="/licoes-dos-livros/:bookId" element={<LessonViewerPage />} />
           <Route path="/destaques" element={<DestaquesPage />} />
+          <Route path="/quizzes" element={<QuizzesPage />} />
         </Routes>
       </main>
       <Footer />

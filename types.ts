@@ -7,3 +7,69 @@ export interface Book {
   details: string;
   chapters: number;
 }
+
+export interface OtherStudy {
+  id: string;
+  title: string;
+  description: string;
+  tags: string[];
+  image: string;
+  link?: string;
+  comingSoon?: boolean;
+}
+
+export interface Highlight {
+  book: string;
+  verses: {
+    reference: string;
+    text: string;
+    commentary: string;
+  }[];
+}
+
+export interface BookLesson {
+  id: string;
+  title: string;
+  description: string;
+  tags: string[];
+  link?: string;
+  comingSoon?: boolean;
+}
+
+export interface BookCTA {
+  bookId: string;
+  title: string;
+  description: string;
+  buttonText: string;
+  buttonLink: string;
+}
+
+export interface LessonCTA {
+  bookId: string;
+  title: string;
+  description: string;
+  buttonText: string;
+  buttonLink: string;
+}
+
+export interface ArticleCTA {
+  articleId: string;
+  title: string;
+  description: string;
+  buttonText: string;
+  buttonLink: string;
+}
+
+export interface Quiz {
+  id: string;
+  title: string;
+  description: string;
+  questions: Question[];
+}
+
+export interface Question {
+  id: string;
+  text: string;
+  options: string[];
+  correctIndex: number;
+}

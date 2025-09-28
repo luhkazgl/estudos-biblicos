@@ -1,0 +1,1 @@
+export const quizzes = []; // Em breve: lista de quizzes

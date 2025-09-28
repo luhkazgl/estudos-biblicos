@@ -1,8 +1,31 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { highlights } from '../data/highlights';
+import HighlightCard from '../components/HighlightCard';
+
+// Função para gerar IDs seguros para âncoras e rotas
+const slugify = (text: string) =>
+  text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '-');
+
+// Função para rolar suavemente até o livro
+const scrollToBook = (id: string) => {
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+};
+
+// Separar livros por testamento
+const isNewTestament = (book: string) =>
+  ['Mateus', 'Marcos', 'Lucas', 'João', 'Atos', 'Romanos', '1 Coríntios', '2 Coríntios', 'Gálatas', 'Efésios', 'Filipenses', 'Colossenses', '1 Tessalonicenses', '2 Tessalonicenses', '1 Timóteo', '2 Timóteo', 'Tito', 'Filemom', 'Hebreus', 'Tiago', '1 Pedro', '2 Pedro', '1 João', '2 João', '3 João', 'Judas', 'Apocalipse'].includes(book);
+
+const oldTestament = highlights.filter(h => !isNewTestament(h.book));
+const newTestament = highlights.filter(h => isNewTestament(h.book));
 
 const DestaquesPage: React.FC = () => {
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-6xl mx-auto px-4 py-12">
+      {/* Título */}
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold text-slate-800">Destaques</h1>
         <p className="mt-2 text-lg text-slate-600">
@@ -10,102 +33,85 @@ const DestaquesPage: React.FC = () => {
         </p>
       </div>
 
-      {/* João */}
-      <section className="mb-16">
-        <h2 className="text-3xl font-bold text-slate-800 mb-8 border-b-2 border-sky-500 pb-2">João</h2>
-        
-        <div className="space-y-8">
-          {/* João 3:16-17 */}
-          <div className="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <span className="inline-block bg-sky-100 text-sky-700 px-3 py-1 rounded-full text-sm font-semibold">
-                  3:16-17
-                </span>
-              </div>
-              <div className="flex-grow">
-                <blockquote className="text-slate-700 text-lg leading-relaxed mb-4 italic">
-                  "Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito, para que todo aquele que nele crê não pereça, mas tenha a vida eterna. Porque Deus enviou o seu Filho ao mundo, não para que condenasse o mundo, mas para que o mundo fosse salvo por ele."
-                </blockquote>
-                <p className="text-slate-600 text-sm leading-relaxed">
-                  <em>Esse texto é a pregação do evangelho (as boas-novas), declara que Deus encarnou como homem (Jesus) para sofrer a penalidade da nossa culpa, em nosso lugar, revelando o amor de Deus para sua criação através da salvação imerecida por Deus, Cristo Jesus.</em>
-                </p>
-              </div>
+      {/* Índice dividido por testamento */}
+      <div className="grid md:grid-cols-2 gap-8 mb-12">
+        {/* Antigo Testamento */}
+        <div>
+          <h3 className="text-sky-700 font-semibold text-lg mb-4">Antigo Testamento</h3>
+          {oldTestament.length > 0 ? (
+            <div className="flex flex-wrap gap-3">
+              {oldTestament.map((highlight) => {
+                const id = slugify(highlight.book);
+                return (
+                  <button
+                    key={id}
+                    onClick={() => scrollToBook(id)}
+                    className="text-sm bg-sky-50 text-sky-700 px-3 py-1 rounded-full border border-sky-200 hover:bg-sky-100 transition"
+                  >
+                    {highlight.book}
+                  </button>
+                );
+              })}
             </div>
-          </div>
+          ) : (
+            <p className="text-slate-500 text-sm italic">Em breve</p>
+          )}
+        </div>
 
-          {/* João 14:6 */}
-          <div className="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <span className="inline-block bg-sky-100 text-sky-700 px-3 py-1 rounded-full text-sm font-semibold">
-                  14:6
-                </span>
-              </div>
-              <div className="flex-grow">
-                <blockquote className="text-slate-700 text-lg leading-relaxed mb-4 italic">
-                  "Disse-lhe Jesus: Eu sou o caminho, e a verdade e a vida, ninguém vem ao Pai, senão por mim"
-                </blockquote>
-                <p className="text-slate-600 text-sm leading-relaxed">
-                  <em>A declaração clara de Quem Jesus É, o único caminho, a única verdade e a única vida. Que a única possibilidade de salvação é por Jesus.</em>
-                </p>
-              </div>
-            </div>
+        {/* Novo Testamento */}
+        <div>
+          <h3 className="text-sky-700 font-semibold text-lg mb-4">Novo Testamento</h3>
+          <div className="flex flex-wrap gap-3">
+            {newTestament.map((highlight) => {
+              const id = slugify(highlight.book);
+              return (
+                <button
+                  key={id}
+                  onClick={() => scrollToBook(id)}
+                  className="text-sm bg-sky-50 text-sky-700 px-3 py-1 rounded-full border border-sky-200 hover:bg-sky-100 transition"
+                >
+                  {highlight.book}
+                </button>
+              );
+            })}
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Lucas */}
-      <section className="mb-16">
-        <h2 className="text-3xl font-bold text-slate-800 mb-8 border-b-2 border-sky-500 pb-2">Lucas</h2>
-        
-        <div className="space-y-8">
-          {/* Lucas 2:10-11 */}
-          <div className="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <span className="inline-block bg-sky-100 text-sky-700 px-3 py-1 rounded-full text-sm font-semibold">
-                  2:10-11
-                </span>
-              </div>
-              <div className="flex-grow">
-                <blockquote className="text-slate-700 text-lg leading-relaxed mb-4 italic">
-                  "E o anjo lhes disse: Não temais, porque eis aqui vos trago novas de grande alegria, que será para todo o povo: Pois, na cidade de Davi, vos nasceu hoje o Salvador, que é Cristo, o Senhor."
-                </blockquote>
-                <p className="text-slate-600 text-sm leading-relaxed">
-                  <em>Esse texto expõe a mensagem principal do livro de Lucas, que O Salvador, O Cristo, O Senhor, como homem veio para <strong>todos</strong>, para os oprimidos, cativos, doentes, párias, desprezados, gentios, estrangeiros, judeus, livres, pobres, ricos, sãos, em suma, Ele veio para os pecadores oferecer misericórdia para todos os homens.</em>
-                </p>
-              </div>
+      {/* Conteúdo por livro */}
+      {highlights.map((highlight) => {
+        const id = slugify(highlight.book);
+        const studyLink = `/estudos/${id}`;
+        return (
+          <section key={highlight.book} id={id} className="mb-20">
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-2xl font-bold text-slate-800 border-b border-sky-300 pb-2">
+                {highlight.book}
+              </h2>
+              <Link
+                to={studyLink}
+                className="text-sky-600 hover:text-sky-700 text-sm font-medium flex items-center gap-1"
+              >
+                Ver estudo
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Marcos */}
-      {/* <section className="mb-16">
-        <h2 className="text-3xl font-bold text-slate-800 mb-8 border-b-2 border-sky-500 pb-2">Marcos</h2>
-        
-        <div className="space-y-8"> */}
-          {/* Marcos 5:19 */}
-          {/* <div className="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <span className="inline-block bg-sky-100 text-sky-700 px-3 py-1 rounded-full text-sm font-semibold">
-                  5:19
-                </span>
-              </div>
-              <div className="flex-grow">
-                <blockquote className="text-slate-700 text-lg leading-relaxed mb-4 italic">
-                  "Jesus, porém, não lho permitiu, mas disse-lhe: Vai para tua casa, para os teus, e anuncia-lhes quão grandes coisas o Senhor te fez, e como teve misericórdia de ti."
-                </blockquote>
-                <p className="text-slate-600 text-sm leading-relaxed">
-                  <em>Após ser libertado dos demônios, o homem queria seguir Jesus, mas Ele o enviou para testemunhar em sua própria casa. Isso mostra que nosso testemunho pessoal é valioso e que devemos compartilhar o que Deus fez em nossas vidas.</em>
-                </p>
-              </div>
+            <div className="flex flex-wrap gap-6">
+              {highlight.verses.map((verse, index) => (
+                <div key={index} className="w-full md:w-[calc(50%-0.75rem)]">
+                  <HighlightCard
+                    reference={verse.reference}
+                    text={verse.text}
+                    commentary={verse.commentary}
+                  />
+                </div>
+              ))}
             </div>
-          </div>
-        </div>
-      </section> */}
+          </section>
+        );
+      })}
     </div>
   );
 };

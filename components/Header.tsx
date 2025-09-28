@@ -47,6 +47,7 @@ const Header: React.FC = () => {
               <NavLink to="/licoes-dos-livros" className={({ isActive }) => (isActive ? activeLinkClass : inactiveLinkClass)}>Lições Dos Livros</NavLink>
               <NavLink to="/destaques" className={({ isActive }) => (isActive ? activeLinkClass : inactiveLinkClass)}>Destaques</NavLink>
               <NavLink to="/outros-estudos" className={({ isActive }) => (isActive ? activeLinkClass : inactiveLinkClass)}>Outros Estudos</NavLink>
+              <NavLink to="/quizzes" className={({ isActive }) => (isActive ? activeLinkClass : inactiveLinkClass)}>Quizzes</NavLink>
             </nav>
           </div>
         </div>
@@ -60,7 +61,7 @@ const Header: React.FC = () => {
         style={{ backgroundColor: 'rgba(0,0,0,0.4)' }}
       />
 
-      {/* Painel lateral (fora do header para evitar glitches de animação) */}
+      {/* Painel lateral (mobile) */}
       <aside
         id="mobile-menu"
         className={`
@@ -78,6 +79,7 @@ const Header: React.FC = () => {
           <NavLink to="/licoes-dos-livros" onClick={() => setMenuOpen(false)} className={({ isActive }) => (isActive ? activeLinkClass : inactiveLinkClass)}>Lições Dos Livros</NavLink>
           <NavLink to="/destaques" onClick={() => setMenuOpen(false)} className={({ isActive }) => (isActive ? activeLinkClass : inactiveLinkClass)}>Destaques</NavLink>
           <NavLink to="/outros-estudos" onClick={() => setMenuOpen(false)} className={({ isActive }) => (isActive ? activeLinkClass : inactiveLinkClass)}>Outros Estudos</NavLink>
+          <NavLink to="/quizzes" onClick={() => setMenuOpen(false)} className={({ isActive }) => (isActive ? activeLinkClass : inactiveLinkClass)}>Quizzes</NavLink>
         </div>
       </aside>
     </>
