@@ -73,3 +73,18 @@ export interface Question {
   options: string[];
   correctIndex: number;
 }
+
+export interface ShelfBook {
+  id: string;
+  title: string;
+  author: string;
+  description: string;
+  image: string;
+  bannerImage?: string;
+  status: ReadingStatus;
+  comingSoon: boolean;
+  rating?: number;
+  readLink?: string;
+}
+
+export type ReadingStatus = 'lido' | 'lendo' | 'nao-lido';

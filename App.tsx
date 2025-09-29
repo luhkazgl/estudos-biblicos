@@ -13,6 +13,8 @@ import LessonViewerPage from './pages/LessonViewerPage';
 import ArticleViewerPage from './pages/ArticleViewerPage';
 import QuizzesPage from './pages/QuizzesPage';
 import ScrollToTop from './components/ScrollToTop';
+import ShelfPage from './pages/ShelfPage';
+import BookViewerPage from './pages/BookViewerPage';
 
 
 function App() {
@@ -30,7 +32,9 @@ function App() {
           <Route path="/licoes-dos-livros" element={<LicoesDosLivrosPage />} />
           <Route path="/licoes-dos-livros/:bookId" element={<LessonViewerPage />} />
           <Route path="/destaques" element={<DestaquesPage />} />
-          <Route path="/quizzes" element={<QuizzesPage />} />
+          <Route path="/quizzes" element={<QuizzesPage />} />          
+          <Route path="/estante" element={<ShelfPage />} />
+          <Route path="/estante/:bookId" element={<BookViewerPage />} />
         </Routes>
       </main>
       <Footer />
