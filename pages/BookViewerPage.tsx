@@ -85,7 +85,7 @@ const BookViewerPage: React.FC = () => {
             📖 Ler gratuitamente online
           </a>
           <p className="text-sm text-slate-500 mt-2">
-            Você será redirecionado para uma página externa com acesso gratuito ao conteúdo completo.
+            Você será redirecionado para uma página externa com acesso gratuito ao conteúdo completo do livro.
           </p>
         </div>
       )}

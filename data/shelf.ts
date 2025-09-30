@@ -15,13 +15,23 @@ export const shelf: ShelfBook[] = [
   },
   {
     id: 'quem-e-voce-quando-ninguem-esta-olhando',
-    title: 'Quem é você quando ninguém está olhando',
+    title: 'Quem é você quando ninguém está olhando?',
     author: 'Bill Hybels',
-    description: 'Livro sobre integridade e caráter pessoal.',
-    image: 'https://m.media-amazon.com/images/I/615Fz86o3YL._SY342_.jpg',
+    description: 'Este livro é um convite à reflexão sobre caráter e integridade. Bill Hybels parte da pergunta provocadora: “Quem somos quando não há ninguém para nos observar?” A obra mostra que, muitas vezes, agimos corretamente apenas quando nossa reputação está em jogo, mas o verdadeiro caráter se revela nos momentos em que não há plateia.',
+    image: 'https://m.media-amazon.com/images/I/81B2MomMmKL._SL1500_.jpg',
     status: 'lido',
     comingSoon: true, 
-    rating: 4,
+    rating: 5,
+  },
+  {
+    id: 'em-seus-passos-o-que-faria-jesus',
+    title: 'Em seus passos o que faria Jesus?',
+    author: 'Charles Sheldon',
+    description: 'Este livro é um clássico da literatura cristã que desafia os leitores a refletirem sobre suas ações diárias à luz dos ensinamentos de Jesus. A narrativa gira em torno de um grupo de pessoas que, inspiradas por uma pergunta provocadora, decidem viver suas vidas de acordo com o que acreditam que Jesus faria em suas situações. A obra aborda temas como ética, moralidade e responsabilidade social, incentivando os leitores a adotarem uma postura mais consciente e compassiva em suas vidas.',
+    image: 'https://tse3.mm.bing.net/th/id/OIP.hIX4xeXeDduSRjCn2Jx7JQAAAA?rs=1&pid=ImgDetMain&o=7&rm=3',
+    status: 'lido',
+    comingSoon: true, 
+    rating: 5,
   },
 
 ];
