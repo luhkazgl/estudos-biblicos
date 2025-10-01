@@ -60,13 +60,21 @@ export interface ArticleCTA {
   buttonLink: string;
 }
 
+export type QuizTestament = 'Antigo Testamento' | 'Novo Testamento';
+export type QuizTopic = 'Evangelhos' | 'História' | 'Profecias' | 'Personagens' | 'Versículos';
+
+export type QuizDifficulty = 'Fácil' | 'Médio' | 'Difícil';
+
 export interface Quiz {
   id: string;
   title: string;
   description: string;
+  testament: QuizTestament;
+  topic: QuizTopic;
+  topicSlug: string;
+  difficulty: QuizDifficulty;
   questions: Question[];
 }
-
 export interface Question {
   id: string;
   text: string;
