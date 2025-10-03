@@ -7,6 +7,7 @@ interface CallToActionCardProps {
   description: string;
   buttonText: string;
   buttonLink: string;
+  disabled?: boolean; // Adicione esta linha
 }
 
 const CallToActionCard: React.FC<CallToActionCardProps> = ({
@@ -15,6 +16,7 @@ const CallToActionCard: React.FC<CallToActionCardProps> = ({
   description,
   buttonText,
   buttonLink,
+  disabled, // Adicione esta linha
 }) => {
   return (
     <div className="mt-8 bg-gradient-to-r from-sky-50 to-blue-50 rounded-lg border border-sky-200 p-6">
@@ -36,12 +38,23 @@ const CallToActionCard: React.FC<CallToActionCardProps> = ({
         <div className="flex-grow text-center md:text-left">
           <h3 className="text-xl font-bold text-slate-800 mb-2">{title}</h3>
           <p className="text-slate-600 mb-4">{description}</p>
-          <Link
-            to={buttonLink}
-            className="inline-block bg-sky-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-sky-700 transition-colors"
-          >
-            {buttonText}
-          </Link>
+          {disabled ? (
+            <span
+              className="inline-block bg-sky-300 text-white font-semibold py-3 px-6 rounded-lg opacity-60 cursor-not-allowed"
+              title="Em breve"
+              tabIndex={0}
+              aria-disabled="true"
+            >
+              {buttonText}
+            </span>
+          ) : (
+            <Link
+              to={buttonLink}
+              className="inline-block bg-sky-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-sky-700 transition-colors"
+            >
+              {buttonText}
+            </Link>
+          )}
         </div>
       </div>
     </div>

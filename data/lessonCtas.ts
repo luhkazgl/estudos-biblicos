@@ -15,4 +15,11 @@ export const lessonCtas: LessonCTA[] = [
     buttonText: 'Estudar Marcos',
     buttonLink: '/estudos/marcos',
   },
+  {
+    bookId: 'marcos',
+    title: 'Prosseguir para a leitura de Mateus',
+    description: '...',
+    buttonText: 'Estudar Mateus',
+    buttonLink: '/estudos/mateus',
+  },
 ];

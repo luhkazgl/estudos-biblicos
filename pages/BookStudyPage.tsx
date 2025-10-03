@@ -122,6 +122,7 @@ const BookStudyPage: React.FC = () => {
             description={cta.description}
             buttonText={cta.buttonText}
             buttonLink={cta.buttonLink}
+            disabled={cta.disabled} // Adicione esta linha
           />
         </div>
       )}

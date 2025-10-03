@@ -42,6 +42,7 @@ export interface BookCTA {
   description: string;
   buttonText: string;
   buttonLink: string;
+  disabled?: boolean;
 }
 
 export interface LessonCTA {
