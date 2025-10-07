@@ -11,7 +11,7 @@ export const verses = [
     quote: 'Lâmpada para os meus pés é a tua palavra e, luz para os meus caminhos.',
     reference: 'Salmos 119:105',
     description:
-      'Em um mundo de incertezas, as Escrituras são uma lâmpada para nossos pés, oferecendo sabedoria divina e direção clara.',
+      'Em um mundo de incertezas, as Escrituras são uma lâmpada para nossos pés, oferecendo sabedoria guiada pelo Espírito Santo e direção clara.',
   },
   {
     title: 'Fonte de Esperança',
