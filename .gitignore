@@ -27,7 +27,3 @@ dist-ssr
 # Other
 .env.local
 .env.development.local
-
-format.py
-RawMarcos11.md
-11.md
