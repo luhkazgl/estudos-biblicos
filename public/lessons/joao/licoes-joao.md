@@ -31,4 +31,4 @@ Esses versículos mostram que Jesus e o Pai compartilham a mesma essência, vont
 - **João 12:45** – “Quem me vê, vê aquele que me enviou.”
 - **João 1:18** – “O Filho unigênito, que está no seio do Pai, esse o revelou.”
 
-Esses textos não apenas revelam **quem Jesus é**, mas também mostram que **conhecê-lo é conhecer o próprio Deus**.
+*Esses textos não apenas revelam **quem Jesus é**, mas também mostram que **conhecê-lo é conhecer o próprio Deus**.*

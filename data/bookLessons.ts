@@ -13,7 +13,8 @@ export const bookLessons: BookLesson[] = [
     title: 'Marcos',
     description: 'Um Evangelho dinâmico e cheio de ação, focado nos milagres e no serviço de Jesus.',
     tags: ['Serviço', 'Milagres', 'Ação'],
-    comingSoon: true,
+    link: '/licoes-dos-livros/marcos',
+    // comingSoon: true,
   },
   {
     id: 'lucas',

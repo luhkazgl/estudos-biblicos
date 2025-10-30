@@ -18,8 +18,15 @@ export const lessonCtas: LessonCTA[] = [
   {
     bookId: 'marcos',
     title: 'Prosseguir para a leitura de Mateus',
-    description: '...',
+    description: 'Continue sua jornada pelos Evangelhos! Explore o Evangelho de Mateus e --',
     buttonText: 'Estudar Mateus',
     buttonLink: '/estudos/mateus',
+  },
+  {
+    bookId: 'mateus',
+    title: 'Prosseguir para a leitura de --',
+    description: '...',
+    buttonText: 'Estudar --',
+    buttonLink: '/estudos/--',
   },
 ];

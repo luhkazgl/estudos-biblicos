@@ -7,7 +7,7 @@
 - “E o anjo lhes disse: Não temais, porque eis aqui vos trago novas de grande alegria, que será para todo o povo:
 Pois, na cidade de Davi, vos nasceu hoje o Salvador, que é Cristo, o Senhor.”
 
-O Salvador, O Cristo, O Senhor, como homem veio para **todos,** para os oprimidos, cativos, doentes, párias, desprezados, gentios, estrangeiros, judeus, livres, pobres, ricos, sãos, homens, mulheres, em suma, Ele veio para os pecadores oferecer misericórdia para todos os homens.   
+*O Salvador, O Cristo, O Senhor, como homem veio para **todos,** para os oprimidos, cativos, doentes, párias, desprezados, gentios, estrangeiros, judeus, livres, pobres, ricos, sãos, homens, mulheres, em suma, Ele veio para os pecadores oferecer misericórdia para todos os homens.*   
 
 ## Para quem Jesus veio? Para TODOS.
 
