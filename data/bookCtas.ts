@@ -30,7 +30,7 @@ export const bookCtas: BookCTA[] = [
     bookId: 'mateus',
     title: 'Descubra os Ensinos de Mateus',
     description:
-      'Aprofunde seu conhecimento! Descubra as principais lições e ensinamentos extraídos do Evangelho de Mateus, --',
+      'Aprofunde seu conhecimento! Descubra as principais lições e ensinamentos extraídos do Evangelho de Mateus, incluindo o cumprimento das profecias messiânicas do Antigo Testamento e o ensino sobre o Reino dos Céus.',
     buttonText: 'Ver Lições de Mateus',
     buttonLink: '/licoes-dos-livros/mateus',
     disabled:true,
