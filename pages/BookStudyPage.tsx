@@ -48,7 +48,8 @@ const BookStudyPage: React.FC = () => {
     const markdown = await loadMarkdown(`/studies/${bookId}/${chapter}.md`);
 
     if (
-      !markdown ||
+      !markdown || 
+      markdown.trim() === '' ||
       markdown.includes('<!DOCTYPE html>') ||
       markdown.includes('<script') ||
       markdown.includes('<meta')

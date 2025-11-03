@@ -4,9 +4,10 @@ interface Props {
   reference: string;
   text: string;
   commentary: string;
+  related?: string;
 }
 
-const HighlightCard: React.FC<Props> = ({ reference, text, commentary }) => (
+const HighlightCard: React.FC<Props> = ({ reference, text, commentary, related }) => (
   <div className="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
     <div className="flex items-start gap-4">
       <div className="flex-shrink-0">
@@ -21,6 +22,9 @@ const HighlightCard: React.FC<Props> = ({ reference, text, commentary }) => (
         <p className="text-slate-600 text-sm leading-relaxed">
           <em>{commentary}</em>
         </p>
+          {related && (
+        <p className="text-sky-600 text-sm font-medium mt-2">{related}</p>
+      )}
       </div>
     </div>
   </div>

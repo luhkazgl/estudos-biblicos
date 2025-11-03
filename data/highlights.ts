@@ -31,19 +31,21 @@ export const highlights: Highlight[] = [
       }
     ]
   },
-  // {
-  //   book: 'Marcos',
-  //   verses: [
-  //     {
-  //       reference: '2:10-11',
-  //       text: 'E o anjo lhes disse: Não temais, porque eis aqui vos trago novas de grande alegria, que será para todo o povo: Pois, na cidade de Davi, vos nasceu hoje o Salvador, que é Cristo, o Senhor.',
-  //       commentary: 'Esse texto expõe a mensagem principal do livro de Lucas, que O Salvador, O Cristo, O Senhor, como homem veio para todos, para os oprimidos, cativos, doentes, párias, desprezados, gentios, estrangeiros, judeus, livres, pobres, ricos, sãos, em suma, Ele veio para os pecadores oferecer misericórdia para todos os homens.'
-  //     },
-  //     {
-  //       reference: '11:1-4',
-  //       text: 'Certo dia Jesus estava orando em determinado lugar. Quando terminou, um dos seus discípulos lhe disse: "Senhor, ensina-nos a orar, como João ensinou aos discípulos dele". Ele lhes disse: "Quando vocês orarem, digam: Pai, santificado seja o teu nome. Venha o teu Reino. Dá-nos cada dia o nosso pão cotidiano. Perdoa-nos os nossos pecados, pois também perdoamos a todos os que nos devem. E não nos deixes cair em tentação."',
-  //       commentary: 'Um fato que deve se atentar é de sempre manter o equilíbrio sobre a "Oração do Pai Nosso", enquanto os católicos tendem a transformar essa oração num "mantra", esvaziando todo o propósito da oração. Os evangélicos tendem a tratar essa oração como "só mais uma oração", sendo que foi o próprio Jesus que a ensinou esse modelo, ambos os extremos são prejudiciais.'
-  //     }
-  //   ]
-  // }
+  {
+    book: 'Marcos',
+    verses: [
+      {
+        reference: '10:45',
+        text: 'Pois nem mesmo o Filho do Homem veio para ser servido, mas para servir e dar a sua vida em resgate por muitos',
+        commentary: 'Esse é um versículo chave do livro de Marcos, ele revela o caráter de Jesus, o seu serviço e sacrifício pela humanidade.',
+        related: 'Ler também Salmos 34:22.'
+      },
+      {
+        reference: '1:15',
+        text: '"O tempo é chegado”, dizia ele. “O Reino de Deus está próximo. Arrependam-se e creiam nas boas novas!”',
+        commentary: 'A mensagem central da bíblia como um todo, é um alto grito de urgência: "ARREPENDAM-SE" e tornem-se para Deus, ouçam suas boas novas (evangelho), pois o reino de Deus está próximo, não fique de fora, ARREPENDAM-SE enquanto há tempo.',
+        related: 'Ler também Isaías 55:6-7.'
+      }
+    ]
+  }
 ];

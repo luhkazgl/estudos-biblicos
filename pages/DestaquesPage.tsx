@@ -105,6 +105,7 @@ const DestaquesPage: React.FC = () => {
                     reference={verse.reference}
                     text={verse.text}
                     commentary={verse.commentary}
+                    related={verse.related}
                   />
                 </div>
               ))}

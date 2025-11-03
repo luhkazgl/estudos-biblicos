@@ -9,5 +9,5 @@
 
 # TODO
 
-[] Add: highlights to Marcos
-[] Fix: Studies not found m
+[] Fix: Studies not found message
+[] Add: Outros estudos - Como estudar a bíblia

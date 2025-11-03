@@ -24,6 +24,7 @@ export interface Highlight {
     reference: string;
     text: string;
     commentary: string;
+    related?: string;
   }[];
 }
 

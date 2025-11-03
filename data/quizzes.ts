@@ -1,4 +1,6 @@
 import { joaoQuiz } from './quizzes/novo/evangelhos/joao';
+import { lucasQuiz } from './quizzes/novo/evangelhos/lucas';
+import { marcosQuiz } from './quizzes/novo/evangelhos/marcos';
 // import { mateusQuiz } from './quizzes/novo/evangelhos/mateus';
 // import { atosQuiz } from './quizzes/novo/igreja/atos';
 // import { pauloQuiz } from './quizzes/novo/paulo/paulo';
@@ -10,6 +12,8 @@ import { joaoQuiz } from './quizzes/novo/evangelhos/joao';
 
 // Adicione todos os quizzes ao array abaixo
 export const quizzes = [
+  marcosQuiz,
+  lucasQuiz,
   joaoQuiz,
   // mateusQuiz,
   // atosQuiz,
