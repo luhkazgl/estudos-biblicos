@@ -11,3 +11,4 @@
 
 [] Fix: Studies not found message
 [] Add: Outros estudos - Como estudar a bíblia
+[] Add: Estante - Quem é voce ....
